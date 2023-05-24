@@ -1,0 +1,32 @@
+ <div class="container_in">
+            <input type="text" class="txt"></input>
+            <button class="btn">button</button>
+        </div>
+
+
+//js
+         var input = document.getElementsByClassName('txt')[0];
+         var btn = document.getElementsByClassName('btn')[0].onclick = function() {
+            if(input.value == "") {
+                console.log('input txt please');
+            }
+
+            else if (input.value !== "" || input.value === null || input.value === 'undefined') {
+                    var div = document.createElement('div');
+                    var cl = div.classList.add('div');
+                    var cont = div.innerHTML = `<div> ${input.value}</div>`;
+                    input.value = "";
+                 if(input.value ===  "hello") {
+                    console.log('hello44')
+                 }
+
+                  else {
+                    console.warn('warn')
+                  }
+
+                    console.log(div);
+            }
+            else {
+                console.log('love')
+            }
+         }
